@@ -1,5 +1,5 @@
-import './App.css'
-import { Routes, Route, Link } from 'react-router-dom'
+import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
 import EditPhoto from './routes/EditPhoto';
 import Home from './routes/Home';
 import Photos from './routes/Photos';
@@ -8,15 +8,11 @@ import NotFound from './routes/NotFound';
 
 const App = () => {
   return (
-    <>
-      <div className='navbar'>
-        <div className='studentInfo'>
-          <h2 className="studentName">Affan Maulana</h2>
-          <p className="studentId">FE2787726</p>
-        </div>
-        <Link to='/'>Home</Link>
-        <Link to='/photos'>My Photos</Link>
-        <Link to='/add'>Add Photo</Link>
+    <main className="overflow-hidden">
+      <div className="flex justify-center gap-10 p-[29px] border-b-2 border-dashed relative bg-gradient-to-r from-blue-500 from-10% via-sky-500 via-30% to-pink-500 to-90% ... bg-opacity-20 backdrop-blur-xl text-white">
+        <Link to="/">Home</Link>
+        <Link to="/photos">My Photos</Link>
+        <Link to="/add">Add Photo</Link>
       </div>
 
       <Routes>
@@ -28,7 +24,7 @@ const App = () => {
         <Route path="/add" element={<AddPhoto />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </main>
   );
 };
 
